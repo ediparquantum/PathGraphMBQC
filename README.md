@@ -9,7 +9,7 @@ The path graph, P, consists of a graph that can be represented as a single line 
 
 A simple example is presented in `runSimpleMbqcPathGraph.cpp` and can be run in conjunction with QuEST. Place this repository in the main directory of QuEST and run
 
-Once the project is in quest, here is a simple example to execute the above script
+Once the project is in quest, here is a simple example to execute the above script inside the `build` directory.
 
 ```
 cmake .. -DUSER_SOURCE="projects/PathGraphMBQC/runSimpleMbqcPathGraph.cpp" -DOUTPUT_EXE="runSimpleMbqcPathGraph" && make && ./runSimpleMbqcPathGraph
@@ -17,4 +17,8 @@ cmake .. -DUSER_SOURCE="projects/PathGraphMBQC/runSimpleMbqcPathGraph.cpp" -DOUT
 
 Note that the root folder is QuEST, a subfolder called `project` has been created and inside is the `runSimpleMbqcPathGraph.hpp` file. There are other options to use in `cmake`, but see the QuEST repository for further instructions.
 
-Note QuEST can be found: https://quest.qtechtheory.org/
+## QuEST
+website: [https://quest.qtechtheory.org/](https://quest.qtechtheory.org/) 
+github: [https://github.com/QuEST-Kit/QuEST](https://github.com/QuEST-Kit/QuEST)
+
+
