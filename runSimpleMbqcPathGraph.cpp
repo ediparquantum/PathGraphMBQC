@@ -26,7 +26,7 @@ int main() {
         } 
     
     vector<int> outcomes;
-    outcomes = runMbqcPathGraph(qureg,pathGraph,qubitAngles);
+    outcomes = runMbqcPathGraph(qureg,qubitAngles,numberQubits);
     
     for(int i: outcomes){
         cout << i << " ";
