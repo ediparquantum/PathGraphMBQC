@@ -18,6 +18,9 @@ int main() {
     int numberQubits = 5; // Any number
     // prepare our register
     Qureg qureg = createQureg(numberQubits, env);
+
+    // qureg -> |+><+|
+    initPlusState(qureg);  
     
     // set initial angles
     vector<qreal> qubitAngles;

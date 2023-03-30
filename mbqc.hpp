@@ -1,5 +1,4 @@
 #include <QuEST.h>
-//#include <stdio.h>
 #include <vector>
 #include <iostream>
 #include <string>
@@ -183,6 +182,8 @@ vector<int> runMbqcPathGraph(
     vector<int> measuredQubitsOutcomes;
     
     qreal X1;
+    int s0;
+    int s1;
     int firstQubitIndex=0;
     int secondQubitIndex=1;
     
@@ -199,17 +200,17 @@ vector<int> runMbqcPathGraph(
 
 
     // Measure first qubit and update angle
-    updatedQubitAngles.push_back(qubitAngles[firstQubitIndex]);
-    rotateZ(qureg,firstQubitIndex, (-1)*updatedQubitAngles[firstQubitIndex]);
+    rotateZ(qureg,firstQubitIndex, (-1)*qubitAngles[firstQubitIndex]);
     hadamard(qureg,firstQubitIndex);
-    measuredQubitsOutcomes.push_back(measure(qureg,firstQubitIndex));
+    s0 = measure(qureg,firstQubitIndex);
+    measuredQubitsOutcomes.push_back(s0);
 
     // measure second qubit
     X1 = pow((-1),measuredQubitsOutcomes[firstQubitIndex])*qubitAngles[secondQubitIndex];
-    updatedQubitAngles[secondQubitIndex] = X1;
-    rotateZ(qureg,secondQubitIndex, (-1)*updatedQubitAngles[secondQubitIndex]);
+    rotateZ(qureg,secondQubitIndex, (-1)*X1);
     hadamard(qureg,secondQubitIndex);
-    measuredQubitsOutcomes.push_back(measure(qureg,secondQubitIndex));
+    s1 = measure(qureg,secondQubitIndex);
+    measuredQubitsOutcomes.push_back(s1);
                 
 
     for(int currentQubit=2;currentQubit<numberQubits;currentQubit++)
