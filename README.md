@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/19248072/225727493-def23a0b-96e3-4310-aa9b-5f27fb0c6f2a.png"  width="300" height="200">
 
-# PathGraphMBQC
+# pathGraphMBQC
 Implementing QuEST quantum mechanics toolbox in path graphs MBQC.
 
 Measurement Based Quantum Computation (MBQC) is a different model for performing quantum computation from the ciruit base model. An abstract graph (nodes and edges) is the base of the MBQC. In this repository we focus on the path graph only.
