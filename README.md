@@ -7,7 +7,7 @@ Measurement Based Quantum Computation (MBQC) is a different model for performing
 
 The path graph, P, consists of a graph that can be represented as a single line of edges and nodes. 
 
-<img src="https://user-images.githubusercontent.com/19248072/225726167-6cf3710d-db2c-479c-be50-f8f9ce9ed101.png"  width="300" height="75">
+<img src="https://user-images.githubusercontent.com/19248072/225726167-6cf3710d-db2c-479c-be50-f8f9ce9ed101.png"  width="300" height="45">
 
 
 To perform the computation we initialise all qubits in the plus state and a list of angles corresponding to each qubit. The computation is performed one qubit at a time. The first qubit is rotated in the Z-axis by the negative value of the first angle and then the Hadamard gate is applied, then the qubit is measured in the compurational basis. This process is repeated for all of the qubits. The caveat is that each subsequent qubit uses previous qubits to update the angle of that current qubit.
