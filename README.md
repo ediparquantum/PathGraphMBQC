@@ -19,28 +19,26 @@ $$\phi'_2 = (-1)^{s_{f^{-1}(2)}}\phi_2 = (-1)^{s_1}\phi_2.$$
 
 Then we perform the same tasks of $RZ(-\phi'_2)$, then perform the $H$ gate on $q_2$, then measure in the computational basis. From the third qubit untill the final qubit the angles are updated as 
 
-$$\phi'_i = (-1)^{s_{f^{-1}(i)}}\phi_i + \pi \left( f^{-1}\circ f^{-1}(q_i) \right) = (-1)^{s_{i-1}}\phi_2 + \pi s_{i-2}$$
+$$\phi'_i = (-1)^{s_{f^{-1}(i)}}\phi_i + \pi \left( f^{-1}\circ f^{-1}(q_i) \right) = (-1)^{s_{i-1}}\phi_2 + \pi s_{i-2}.$$
 
+For an arbitraty graph, the flow function may not be so straightforward to compute, but for $P$ we can see it is straightforward. As before, once the updated angle for the qubit to be measured is computed, then perform the $RZ(-\phi'_i)H$ gates, then measure $q_i$ in the computational basis. Each measurement causes the quantum state to project onto a smaller subspace iteratively until the desired number of qubits has been measured. 
 
+To run the path graph functionality, one must first download the QuEST toolkit. 
 
+1. Download QuEST from the [QueST downloads page](https://quest.qtechtheory.org/download/)
+2. Alternatively go to the [QuEST GitHub page](https://github.com/QuEST-Kit/QuEST)
 
-and a list of angles corresponding to each qubit. The computation is performed one qubit at a time. The first qubit is rotated in the Z-axis by the negative value of the first angle and then the Hadamard gate is applied, then the qubit is measured in the compurational basis. This process is repeated for all of the qubits. The caveat is that each subsequent qubit uses previous qubits to update the angle of that current qubit.
+Once QuEST is downloaded into a folder location in your system the following has been done 
 
-In the root `CMakeLists.txt` file add `set(CMAKE_CXX_STANDARD 11)` to set the compiler to C++11 (at least on Mac this had to be done).
+1. In the root `CMakeLists.txt` file add `set(CMAKE_CXX_STANDARD 11)` to set the compiler to C++11 (at least on Mac this had to be done).
 
-A simple example is presented in `runSimpleMbqcPathGraph.cpp` and can be run in conjunction with QuEST. Place this repository in the main directory of QuEST and run
-
-Once the project is in quest, here is a simple example to execute the above script inside the `build` directory.
+After QuEST is set up, download or clone this repository into a subfolder of the QuEST directory, `QuEST/projects/PathGraphMBQC/` for example. A simple example is presented in `runSimpleMbqcPathGraph.cpp` and can be run in conjunction with QuEST. Place this repository in the main directory of QuEST and run
 
 ```
 cmake .. -DUSER_SOURCE="projects/PathGraphMBQC/runSimpleMbqcPathGraph.cpp" -DOUTPUT_EXE="runSimpleMbqcPathGraph" && make && ./runSimpleMbqcPathGraph
 ```
 
-Note that the root folder is QuEST, a subfolder called `project` has been created and inside is the `runSimpleMbqcPathGraph.hpp` file. There are other options to use in `cmake`, but see the QuEST repository for further instructions.
-
-## QuEST
-website: [https://quest.qtechtheory.org/](https://quest.qtechtheory.org/) 
-github: [https://github.com/QuEST-Kit/QuEST](https://github.com/QuEST-Kit/QuEST)
+QuEST uses cmake and there are several compiling options, which can be found in the [QuEST compiling documentation](https://github.com/QuEST-Kit/QuEST/blob/master/examples/README.md#compiling) page.
 
 
 ## To do
