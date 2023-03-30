@@ -44,4 +44,8 @@ QuEST uses cmake and there are several compiling options, which can be found in 
 ## To do
 - [ ] Test functionality on density matrix for mixed states
 - [ ] Test on different path graph mbqc circuits
+- [ ] Include script testing that on an odd number of qubits with all angles being set to 0, that the last qubit is always a 0.
+- [ ] Test that on two qubits with both angles being set to pi/2 that the last qubit is always 0.
+- [ ] Test that on an odd number qubits and every second angle being set to zero that if the sum of the angles is a multiple of 2pi than the last qubit is 0, if a multiple of 2pi + pi then the last qubit is 1.
+
 
