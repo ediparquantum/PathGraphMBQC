@@ -22,3 +22,7 @@ website: [https://quest.qtechtheory.org/](https://quest.qtechtheory.org/)
 github: [https://github.com/QuEST-Kit/QuEST](https://github.com/QuEST-Kit/QuEST)
 
 
+## To do
+- [ ] Test functionality on density matrix for mixed states
+- [ ] Test on different path graph mbqc circuits
+
