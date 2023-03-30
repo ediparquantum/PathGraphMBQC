@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/19248072/225727493-def23a0b-96e3-4310-aa9b-5f27fb0c6f2a.png"  width="300" height="200">
+
 # PathGraphMBQC
 Implementing QuEST quantum mechanics toolbox in path graphs MBQC.
 
