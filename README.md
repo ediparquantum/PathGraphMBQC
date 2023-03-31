@@ -41,11 +41,22 @@ cmake .. -DUSER_SOURCE="projects/PathGraphMBQC/runSimpleMbqcPathGraph.cpp" -DOUT
 QuEST uses cmake and there are several compiling options, which can be found in the [QuEST compiling documentation](https://github.com/QuEST-Kit/QuEST/blob/master/examples/README.md#compiling) page.
 
 
+## Tests
+So far three tests have been completed.
+
+1. The last qubit should measure $0$
+   1. Set an odd numbner of qubits and all initial angles at $0$ (`oddNumberQubitAnglesAllZero.cpp`)
+   2. Set an odd number of qubits, every second angle is $0$ and the sum of angles is a multiple of $2n\pi$ (`oddNumberQubitsEverySecondsAngleZero.cpp`)
+   3. Set $2$ qubits and each angle is $\pi/2$ (`twoQubitsAnglesPiOnTwo.cpp`)
+2. The last qubit should measure $1$
+    1. Set an odd number of qubits, every second angle is $0$ and the sum of angles is a multiple of $2n\pi + \pi$ (`oddNumberQubitsEverySecondsAngleZero.cpp`) 
+
+Note that all of these test and functions have been written with pure states in mind.
 ## To do
 - [ ] Test functionality on density matrix for mixed states
 - [ ] Test on different path graph mbqc circuits
-- [ ] Include script testing that on an odd number of qubits with all angles being set to 0, that the last qubit is always a 0.
-- [ ] Test that on two qubits with both angles being set to pi/2 that the last qubit is always 0.
-- [ ] Test that on an odd number qubits and every second angle being set to zero that if the sum of the angles is a multiple of 2pi than the last qubit is 0, if a multiple of 2pi + pi then the last qubit is 1.
+- [x] Include script testing that on an odd number of qubits with all angles being set to 0, that the last qubit is always a 0.
+- [x] Test that on two qubits with both angles being set to pi/2 that the last qubit is always 0.
+- [x] Test that on an odd number qubits and every second angle being set to zero that if the sum of the angles is a multiple of 2pi than the last qubit is 0, if a multiple of 2pi + pi then the last qubit is 1.
 
 
